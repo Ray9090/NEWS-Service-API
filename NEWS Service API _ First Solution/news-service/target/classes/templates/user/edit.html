@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+</head>
+<body>
+    <form action="#"
+          th:action="@{/admin/edit/{id}(id=${user.id})}"
+          th:object="${user}"
+          method="post">
+        <label for="username">Username</label>
+        <input type="text" th:field="*{username}" id="username" placeholder="username">
+        <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+        <div th:object="${roleToAdd}" >
+        <label for="role">Role</label>
+        <select id="choice" name="roleId">
+            <option th:each="choice : ${allRoles}"
+                    th:value="${choice.id}"
+                    th:text="${choice.name}"></option>
+        </select>
+        </div>
+        <input type="submit" value="Update User">
+    </form>
+</body>
+</html>
