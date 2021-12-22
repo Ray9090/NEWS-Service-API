@@ -22,3 +22,5 @@ How solution 3 works
 
 
 ![News Service_solution 3](https://user-images.githubusercontent.com/58274552/147097764-fd94d89c-7bf4-458f-8289-e63cba826586.PNG)
+
+update till December 22, 2021: Solution 3 have few errors that I can not remove due to sodtware licence.
