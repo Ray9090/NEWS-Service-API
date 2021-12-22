@@ -25,3 +25,5 @@ How solution 3 works
 
 update till December 22, 2021: Solution 3 have few errors that I can not remove due to sodtware licence.
 error : dependency error in news-service micro service and apigateway 
+
+after run the clean mvn and install checking the error and trying to solve it
