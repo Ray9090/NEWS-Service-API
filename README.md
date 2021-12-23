@@ -23,7 +23,13 @@ How solution 3 works
 
 ![News Service_solution 3](https://user-images.githubusercontent.com/58274552/147097764-fd94d89c-7bf4-458f-8289-e63cba826586.PNG)
 
-update till December 22, 2021: Solution 3 have few errors that I can not remove due to sodtware licence.
+update till December 23, 2021: Solution 3 have few errors that I can not remove due to sodtware licence.
 error : dependency error in news-service micro service and apigateway 
 
 after run the clean mvn and install checking the error and trying to solve it
+
+few errors I am listing down : 
+
+1. plugin'org.springframework.bootspring-boot-maven-plugin' not found
+2. 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-web:jar -> duplicate declaration of version
+3. Cannot resolve symbol 'springframework'
