@@ -30,7 +30,7 @@ after run the clean mvn and install checking the error and trying to solve it
 
 few errors I am listing down : 
 
-1. plugin'org.springframework.bootspring-boot-maven-plugin' not found
+1. plugin'org.springframework.bootspring-boot-maven-plugin' not found > after resolving this problem, it came again and again !!!!!!
 2. 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-web:jar -> duplicate declaration of version
 3. Cannot resolve symbol 'springframework'
 4. java: Internal error in the mapping processor: java.lang.NullPointerException
