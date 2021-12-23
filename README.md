@@ -34,3 +34,4 @@ few errors I am listing down :
 2. 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-web:jar -> duplicate declaration of version
 3. Cannot resolve symbol 'springframework'
 4. java: Internal error in the mapping processor: java.lang.NullPointerException
+5. path.directoy configuration property error
