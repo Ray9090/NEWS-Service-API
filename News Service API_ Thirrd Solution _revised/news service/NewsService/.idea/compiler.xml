@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="user-service" />
+        <module name="ApiGateway" />
+        <module name="AppDiscovryServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-getway" target="11" />
+      <module name="ApiGateway" target="11" />
+      <module name="AppDiscovryServer" target="11" />
+      <module name="eurekaServer" target="11" />
+      <module name="news-service" target="11" />
+      <module name="news-service (1)" target="11" />
+      <module name="newsServer" target="11" />
+      <module name="user-service" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateway" options="-parameters" />
+      <module name="AppDiscovryServer" options="-parameters" />
+      <module name="api-getway" options="-parameters" />
+      <module name="eurekaServer" options="-parameters" />
+      <module name="news-service" options="-parameters" />
+      <module name="news-service (1)" options="-parameters" />
+      <module name="newsServer" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+    </option>
+  </component>
+</project>

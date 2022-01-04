@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/NewsService/ApiGateway/ApiGateway.iml" filepath="$PROJECT_DIR$/NewsService/ApiGateway/ApiGateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewsService/AppDiscovryServer/AppDiscovryServer.iml" filepath="$PROJECT_DIR$/NewsService/AppDiscovryServer/AppDiscovryServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/delivery.iml" filepath="$PROJECT_DIR$/.idea/delivery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewsService/news-service/news-service/news-service.iml" filepath="$PROJECT_DIR$/NewsService/news-service/news-service/news-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewsService/user-service/user-service.iml" filepath="$PROJECT_DIR$/NewsService/user-service/user-service.iml" />
+    </modules>
+  </component>
+</project>

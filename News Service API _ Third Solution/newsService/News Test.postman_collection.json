@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "0a0314e3-bc1d-4875-8e48-468183a8c937",
+		"name": "News Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Add News",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlcyI6IkFETUlOX1JPTEUiLCJpYXQiOjE2Mzk5NDk1ODcsImV4cCI6MTY0MDgxMzU4N30.B0iOZfx5oBEdD_hp37kJCn2SKlf2PCqXKLOjCPzHQ_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"News Morning\",\n    \"text\" : \"This is news Evenning text\",\n    \"userId\": 1,\n    \"validFrom\": \"2021-12-18\",\n    \"validTo\": \"2021-12-28\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get News by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/userNews?newsId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"userNews"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "newsId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllNewsByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/allNewsByUserId",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"allNewsByUserId"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateNews",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 1,\n        \"title\": \"News Morning updated\",\n        \"text\": \"This is news morning text updated\",\n        \"pictureId\": null,\n        \"creationDate\": \"2021-12-18T17:26:03.778576\",\n        \"validFrom\": null,\n        \"validTo\": 1,\n        \"roleRestriction\": \"USER_ROLE\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/updateNews",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"updateNews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete News",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/deleteNews/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"deleteNews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allNews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/allNews",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"allNews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Picture",
+			"item": [
+				{
+					"name": "upload picture",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlcyI6IkFETUlOX1JPTEUiLCJpYXQiOjE2Mzk5NDk1ODcsImV4cCI6MTY0MDgxMzU4N30.B0iOZfx5oBEdD_hp37kJCn2SKlf2PCqXKLOjCPzHQ_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/sabbar/Downloads/255527522_450424826691142_8464644178160584392_n.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/1/uploadImg?file",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"1",
+								"uploadImg"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get picture",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlcyI6IkFETUlOX1JPTEUiLCJpYXQiOjE2Mzk5NDk1ODcsImV4cCI6MTY0MDgxMzU4N30.B0iOZfx5oBEdD_hp37kJCn2SKlf2PCqXKLOjCPzHQ_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/getImage/4/",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"getImage",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Read Status",
+			"item": [
+				{
+					"name": "set read Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/readStatus?userId=1&newsId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"readStatus"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "newsId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"firstName\",\n  \"lastName\": \"firstName\",\n  \"email\": \"admin1@gmail.com\",\n  \"password\": \"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all News by user id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlcyI6IkFETUlOX1JPTEUiLCJpYXQiOjE2Mzk5NDk1ODcsImV4cCI6MTY0MDgxMzU4N30.B0iOZfx5oBEdD_hp37kJCn2SKlf2PCqXKLOjCPzHQ_c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users-news/allNewsByUserId",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users-news",
+								"allNewsByUserId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@gmail.com\",\n  \"password\": \"Admin@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/USERS-SERVICE/users/authenticate",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"USERS-SERVICE",
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlcyI6Ik5PTkVfUk9MRSIsImlhdCI6MTYzOTkyMzk0OCwiZXhwIjoxNjQwNzg3OTQ4fQ.QZlAuumo8fqj0FpvpwZ8lbyJOUKdqhU1CGLejcogDNw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlcyI6IkFETUlOX1JPTEUiLCJpYXQiOjE2Mzk5NDk1ODcsImV4cCI6MTY0MDgxMzU4N30.B0iOZfx5oBEdD_hp37kJCn2SKlf2PCqXKLOjCPzHQ_c",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
